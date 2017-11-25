@@ -73,7 +73,11 @@ if(id==R.id.nav_know30){
 KnowYourThirty kyt=new KnowYourThirty();
 getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,kyt).commit();
 }
-
+if(id==R.id.nav_about)
+{
+    aboutUs au=new aboutUs();
+    getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,au).commit();
+}
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
