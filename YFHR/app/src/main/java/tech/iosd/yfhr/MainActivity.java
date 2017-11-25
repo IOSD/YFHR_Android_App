@@ -69,7 +69,10 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+if(id==R.id.nav_know30){
+KnowYourThirty kyt=new KnowYourThirty();
+getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,kyt).commit();
+}
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

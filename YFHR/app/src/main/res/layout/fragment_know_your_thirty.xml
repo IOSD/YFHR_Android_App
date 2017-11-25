@@ -1,0 +1,75 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="tech.iosd.yfhr.KnowYourThirty">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/header"
+        android:gravity="bottom"
+        android:textSize="17dp"
+        android:paddingBottom="23dp"
+        android:text="HUMAN RIGHTS DEFINED"
+        android:textAlignment="center"
+        android:textColor="@color/headerColor"
+        android:textStyle="bold" />
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="20dp"
+    android:layout_marginBottom="10dp"
+    card_view:cardElevation="10dp"
+    card_view:cardPreventCornerOverlap="false"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="17dp"
+        android:textColor="#000"
+        android:text="While some dictionaries define the word right as “a privilege,” when used in the context of “human rights,” we are talking about something more basic.\n \n
+Every person is entitled to certain fundamental rights, simply by the fact of being human. These are called “human rights” rather than a privilege (which can be taken away at someone’s whim). \n\n
+They are “rights” because they are things you are allowed to be, to do or to have. These rights are there for your protection against people who might want to harm or hurt you. They are also there to help us get along with each other and live in peace. \n\n
+Many people know something about their rights. Generally they know they have the right to food and a safe place to stay. They know they have a right to be paid for the work they do. But there are many other rights. \n\n
+When human rights are not well known by people, abuses such as discrimination, intolerance, injustice, oppression and slavery can arise. \n\n
+Born out of the atrocities and enormous loss of life during World War II, the United Nations Universal Declaration of Human Rights was signed in 1948 to provide a common understanding of what everyone’s rights are. It forms the basis for a world built on freedom, justice and peace.\n
+"/>
+
+</LinearLayout>
+</android.support.v7.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+android:padding="17dp"
+        android:textColor="#000"
+        android:text="To read the Universal Declaration of Human Rights in a simplified form-
+"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:id="@+id/click"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/headerColor"
+        android:text="Click Here >> \n
+"/>
+</LinearLayout>
+</ScrollView>
