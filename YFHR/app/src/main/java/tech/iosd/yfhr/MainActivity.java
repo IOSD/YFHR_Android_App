@@ -1,5 +1,6 @@
 package tech.iosd.yfhr;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        master
+
         if (id == R.id.nav_educator) {
             educator a= new educator();
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,a).commit();
@@ -84,7 +85,13 @@ public class MainActivity extends AppCompatActivity
           aboutUs au=new aboutUs();
           getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,au).commit();
         }
-        master
+        if(id==R.id.nav_contact){
+            contactUs cu=new contactUs();
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,cu).commit();
+        }
+        if(id==R.id.nav_home){
+            startActivity(new Intent(this,MainActivity.class));
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
