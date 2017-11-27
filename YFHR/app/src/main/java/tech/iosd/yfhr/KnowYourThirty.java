@@ -8,13 +8,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
 public class KnowYourThirty extends Fragment {
 
     private TextView clickhere;
-
+    private ImageView backbuttn;
 
     public KnowYourThirty() {
 
@@ -32,15 +33,35 @@ public class KnowYourThirty extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-       View view=inflater.inflate(R.layout.fragment_know_your_thirty, container, false);
+     final   View view=inflater.inflate(R.layout.fragment_know_your_thirty, container, false);
 clickhere=view.findViewById(R.id.click);
+        backbuttn = (ImageView) view.findViewById(R.id.back);
             clickhere.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://www.youthforhumanrights.org/what-are-human-rights/universal-declaration-of-human-rights/articles-1-15.html")));
+                public void onClick(View v) {
+                    view.findViewById(R.id.cardviewcontent).setVisibility(View.GONE);
+                    view.findViewById(R.id.textOutsideCV).setVisibility(View.GONE);
+                    view.findViewById(R.id.click).setVisibility(View.GONE);
 
+                    view.findViewById(R.id.webviewfragment).setVisibility(View.VISIBLE);
+                    view.findViewById(R.id.back).setVisibility(View.VISIBLE);
+                    getChildFragmentManager().beginTransaction().add(R.id.webviewfragment,new Knowyour30_webview()).commit();
 
                 }
             });
+
+        backbuttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.findViewById(R.id.cardviewcontent).setVisibility(View.VISIBLE);
+                view.findViewById(R.id.textOutsideCV).setVisibility(View.VISIBLE);
+                view.findViewById(R.id.click).setVisibility(View.VISIBLE);
+
+                view.findViewById(R.id.webviewfragment).setVisibility(View.GONE);
+                view.findViewById(R.id.back).setVisibility(View.GONE);
+
+            }
+        });
 
        return view;
     }
