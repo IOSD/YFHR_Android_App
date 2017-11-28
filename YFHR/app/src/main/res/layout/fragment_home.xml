@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="tech.iosd.yfhr.HomeFragment">
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:id="@+id/flipper"
+        android:addStatesFromChildren="true"
+        android:layout_height="200dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contactus"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/header"/>
+    </ViewFlipper>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <!--<View-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:background="#414141"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\nYFHR"
+                android:gravity="center"
+                android:textColor="@color/headerColor"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                />
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="#414141"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:text="\n Youth for Human Rights International (YHRI) is a Los Angeles based nonprofit organization founded in 2001 by Dr. Mary Shuttleworth, an educator born and raised in apartheid South Africa, where she witnessed firsthand the devastating effects of discrimination and the lack of basic human rights.\n\n
+The purpose of YHRI is to teach youth about human rights, specifically the United Nations Universal Declaration of Human Rights, and inspire them to become advocates for tolerance and peace. YHRI has now grown into a global movement, including hundreds of groups, clubs and chapters around the world.\n\n
+Youth for Human Rights International teaches human rights education both in the classroom and in nontraditional educational settings. We aim to reach people from diverse backgrounds, with materials which often appeal across generations. By teaching human rights through all means—from conferences and workshops to hip-hop and dancing—this message has spread around the world.\n\n
+Our materials include the UNITED music video—a street-savvy, multiethnic, anti-bullying message that has captured the imagination of people around the world. Our 30 short public service message videos depict the 30 Articles of the United Nations Universal Declaration of Human Rights. In less than a minute, youth can learn one of their human rights—and all of them in less than half an hour. The videos have garnered media attention as well, airing on television networks in countries worldwide. But it doesn’t end there. The videos are now airing during halftime on stadium screens, within taxicabs, on supermarket screens, in theaters, railway stations, and many other locations.\n
+"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

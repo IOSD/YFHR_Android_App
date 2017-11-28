@@ -11,8 +11,10 @@
     <FrameLayout
         android:id="@+id/container_frame"
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="match_parent">
         <requestFocus/>
+
     </FrameLayout>
 
 </LinearLayout>
