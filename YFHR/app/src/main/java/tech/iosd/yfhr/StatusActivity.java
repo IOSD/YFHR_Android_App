@@ -1,6 +1,7 @@
 package tech.iosd.yfhr;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
@@ -67,7 +68,7 @@ public class StatusActivity extends AppCompatActivity {
                 mProgress.setMessage("Please wait while we save the changes");
                 mProgress.show();
 
-                String status = mStatus.getEditText().getText().toString();
+                final String status = mStatus.getEditText().getText().toString();
 
                 mStatusDatabase.child("status").setValue(status).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -76,6 +77,7 @@ public class StatusActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
 
                             mProgress.dismiss();
+                            startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
 
                         } else {
 

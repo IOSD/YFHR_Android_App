@@ -1,8 +1,5 @@
 package tech.iosd.yfhr;
 
-/**
- * Created by AkshayeJH on 19/06/17.
- */
 
 public class Users {
 

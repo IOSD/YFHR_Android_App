@@ -1,5 +1,4 @@
 package tech.iosd.yfhr;
-import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,7 +8,6 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.TextView;
 
 public class educator extends Fragment {
     WebView web;
@@ -17,13 +15,6 @@ public class educator extends Fragment {
     public educator() {
         // Required empty public constructor
     }
-
-    //
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//
-//    }
     String myUrl="http://yhrisouthasia.ning.com/";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
