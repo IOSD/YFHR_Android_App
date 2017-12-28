@@ -98,6 +98,9 @@ public class MainActivity extends AppCompatActivity
         if(id==R.id.nav_home){
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new HomeFragment()).commit();
         }
+        if(id==R.id.nav_chat){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new chatFragment()).commit();
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
