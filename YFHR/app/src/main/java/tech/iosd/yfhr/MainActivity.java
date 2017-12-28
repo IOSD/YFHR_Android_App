@@ -1,6 +1,8 @@
 package tech.iosd.yfhr;
 
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +19,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -100,6 +104,11 @@ public class MainActivity extends AppCompatActivity
         }
         if(id==R.id.nav_chat){
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new chatFragment()).commit();
+        if(id==R.id.nav_share) {
+            Intent i = new Intent(Intent.ACTION_SEND);
+            i.setType("text/plain");
+            i.putExtra(Intent.EXTRA_TEXT, "Hey, Go check Youth for Human Rights Mobile App at (URL)");
+            startActivity(Intent.createChooser(i, "Share the link with"));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
