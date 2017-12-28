@@ -9,6 +9,12 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name=".FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
         android:theme="@style/AppTheme"
         android:name=".SplashApp">
 
@@ -22,6 +28,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ChatActivity"/>
+        <activity
+            android:name=".StartActivity"/>
+        <activity
+            android:name=".SettingsActivity"/>
+        <activity
+            android:name=".ProfileActivity">
+        <intent-filter>
+            <action android:name="in.tvac.akshaye.lapitchat_TARGET_NOTIFICATION" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+        <activity
+            android:name=".StatusActivity"/>
+        <activity
+            android:name=".RegisterActivity"/>
+        <activity
+            android:name=".LoginActivity"/>
+        <activity
+            android:name=".UsersActivity"/>
+
 
     </application>
 

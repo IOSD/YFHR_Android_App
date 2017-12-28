@@ -102,6 +102,8 @@ public class MainActivity extends AppCompatActivity
         if(id==R.id.nav_home){
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new HomeFragment()).commit();
         }
+        if(id==R.id.nav_chat){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new chatFragment()).commit();
         if(id==R.id.nav_share) {
             Intent i = new Intent(Intent.ACTION_SEND);
             i.setType("text/plain");
