@@ -104,6 +104,14 @@ public class MainActivity extends AppCompatActivity
         }
         if (id == R.id.nav_chat) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, new chatFragment()).commit();
+        if(id==R.id.nav_chat){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new chatFragment()).commit();
+            }
+        if(id==R.id.nav_share) {
+            Intent i = new Intent(Intent.ACTION_SEND);
+            i.setType("text/plain");
+            i.putExtra(Intent.EXTRA_TEXT, "Hey, Go check Youth for Human Rights Mobile App at (URL)");
+            startActivity(Intent.createChooser(i, "Share the link with"));
         }
             if (id == R.id.nav_share) {
                 Intent i = new Intent(Intent.ACTION_SEND);
