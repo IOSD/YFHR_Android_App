@@ -1,9 +1,5 @@
 package tech.iosd.yfhr;
 
-/**
- * Created by AkshayeJH on 30/11/17.
- */
-
 public class Conv {
 
     public boolean seen;

@@ -1,6 +1,7 @@
 package tech.iosd.yfhr;
 
 import android.support.v7.widget.RecyclerView;
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,19 +15,22 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-/**
- * Created by AkshayeJH on 24/07/17.
- */
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder>{
 
 
     private List<Messages> mMessageList;
     private DatabaseReference mUserDatabase;
+
 
     public MessageAdapter(List<Messages> mMessageList) {
 
@@ -50,6 +54,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         public CircleImageView profileImage;
         public TextView displayName;
         public ImageView messageImage;
+        public TextView timeText;
 
         public MessageViewHolder(View view) {
             super(view);
@@ -58,6 +63,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             profileImage = (CircleImageView) view.findViewById(R.id.message_profile_layout);
             displayName = (TextView) view.findViewById(R.id.name_text_layout);
             messageImage = (ImageView) view.findViewById(R.id.message_image_layout);
+            timeText = (TextView) view.findViewById(R.id.time);
 
         }
     }
@@ -65,7 +71,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     @Override
     public void onBindViewHolder(final MessageViewHolder viewHolder, int i) {
 
-        Messages c = mMessageList.get(i);
+        final Messages c = mMessageList.get(i);
 
         String from_user = c.getFrom();
         String message_type = c.getType();
@@ -79,8 +85,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
 
                 String name = dataSnapshot.child("name").getValue().toString();
                 String image = dataSnapshot.child("thumb_image").getValue().toString();
-
                 viewHolder.displayName.setText(name);
+                long different=c.getTime();
+                String mydate =java.text.DateFormat.getDateTimeInstance().format(different);
+              viewHolder.timeText.setText(mydate);
 
                 Picasso.with(viewHolder.profileImage.getContext()).load(image)
                         .placeholder(R.drawable.default_avatar).into(viewHolder.profileImage);

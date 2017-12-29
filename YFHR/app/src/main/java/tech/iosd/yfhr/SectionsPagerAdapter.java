@@ -4,10 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-/**
- * Created by AkshayeJH on 11/06/17.
- */
-
 class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 

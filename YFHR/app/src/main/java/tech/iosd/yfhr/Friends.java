@@ -1,8 +1,5 @@
 package tech.iosd.yfhr;
 
-/**
- * Created by AkshayeJH on 13/07/17.
- */
 
 public class Friends {
 

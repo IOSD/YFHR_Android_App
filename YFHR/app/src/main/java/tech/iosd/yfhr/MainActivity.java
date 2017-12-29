@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, new HomeFragment()).commit();
 
     }
 
@@ -82,26 +82,28 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_educator) {
-            educator a= new educator();
-            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,a).commit();
+            educator a = new educator();
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, a).commit();
 
         }
 
-        if(id==R.id.nav_know30){
-          KnowYourThirty kyt=new KnowYourThirty();
-          getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,kyt).commit();
+        if (id == R.id.nav_know30) {
+            KnowYourThirty kyt = new KnowYourThirty();
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, kyt).commit();
         }
-        if(id==R.id.nav_about){
-          aboutUs au=new aboutUs();
-          getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,au).commit();
+        if (id == R.id.nav_about) {
+            aboutUs au = new aboutUs();
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, au).commit();
         }
-        if(id==R.id.nav_contact){
-            contactUs cu=new contactUs();
-            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,cu).commit();
+        if (id == R.id.nav_contact) {
+            contactUs cu = new contactUs();
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, cu).commit();
         }
-        if(id==R.id.nav_home){
-            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new HomeFragment()).commit();
+        if (id == R.id.nav_home) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, new HomeFragment()).commit();
         }
+        if (id == R.id.nav_chat) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, new chatFragment()).commit();
         if(id==R.id.nav_chat){
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new chatFragment()).commit();
             }
@@ -111,8 +113,15 @@ public class MainActivity extends AppCompatActivity
             i.putExtra(Intent.EXTRA_TEXT, "Hey, Go check Youth for Human Rights Mobile App at (URL)");
             startActivity(Intent.createChooser(i, "Share the link with"));
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+            if (id == R.id.nav_share) {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_TEXT, "Hey, Go check Youth for Human Rights Mobile App at (URL)");
+                startActivity(Intent.createChooser(i, "Share the link with"));
+            }
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
+
     }
 }

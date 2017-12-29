@@ -1,8 +1,5 @@
 package tech.iosd.yfhr;
 
-/**
- * Created by AkshayeJH on 24/07/17.
- */
 
 public class Messages {
 

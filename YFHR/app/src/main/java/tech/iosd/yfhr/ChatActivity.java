@@ -44,10 +44,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class ChatActivity extends AppCompatActivity {
 
     private String mChatUser;
-    private Toolbar mChatToolbar;
-
     private DatabaseReference mRootRef;
-
     private TextView mTitleView;
     private TextView mLastSeenView;
     private CircleImageView mProfileImage;
@@ -69,6 +66,7 @@ public class ChatActivity extends AppCompatActivity {
     private int mCurrentPage = 1;
 
     private static final int GALLERY_PICK = 1;
+    private Toolbar mChatToolbar;
 
     // Storage Firebase
     private StorageReference mImageStorage;
@@ -85,12 +83,9 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-
-//        mChatToolbar = (Toolbar) findViewById(R.id.chat_app_bar);
-//        setSupportActionBar(mChatToolbar);
-
+        mChatToolbar = (Toolbar) findViewById(R.id.chat_app_bar);
+        setSupportActionBar(mChatToolbar);
         ActionBar actionBar = getSupportActionBar();
-
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowCustomEnabled(true);
 

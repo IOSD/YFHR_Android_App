@@ -43,13 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-
-//        mToolbar = (Toolbar) findViewById(R.id.login_toolbar);
-//        setSupportActionBar(mToolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setTitle("Login");
-
-
         mLoginProgress = new ProgressDialog(this);
 
         mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
