@@ -84,9 +84,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_educator) {
             educator a = new educator();
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, a).commit();
-
         }
-
         if (id == R.id.nav_know30) {
             KnowYourThirty kyt = new KnowYourThirty();
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, kyt).commit();
@@ -102,11 +100,9 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, new HomeFragment()).commit();
         }
-        if (id == R.id.nav_chat) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container_frame, new chatFragment()).commit();
         if(id==R.id.nav_chat){
             getSupportFragmentManager().beginTransaction().replace(R.id.container_frame,new chatFragment()).commit();
-            }
+        }
         if(id==R.id.nav_share) {
             Intent i = new Intent(Intent.ACTION_SEND);
             i.setType("text/plain");
