@@ -194,10 +194,7 @@ public class MainActivity extends AppCompatActivity
 
             }
 
-
-        
-
-            if (id == R.id.nav_share) {
+        if (id == R.id.nav_share) {
 
                 Intent i = new Intent(Intent.ACTION_SEND);
 
@@ -206,17 +203,12 @@ public class MainActivity extends AppCompatActivity
                 i.putExtra(Intent.EXTRA_TEXT, "Hey, Go check Youth for Human Rights Mobile App at (URL)");
 
                 startActivity(Intent.createChooser(i, "Share the link with"));
-
-            }
-
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-            drawer.closeDrawer(GravityCompat.START);
-
-            return true;
-
-
         }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 
 
 }
