@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="tech.iosd.yfhr.HomeFragment">
+    tools:context="tech.iosd.yfhr.HomeFragment"
+    >
 
     <ViewFlipper
         android:layout_width="match_parent"
@@ -13,15 +14,23 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon"/>
+            android:src="@drawable/image1"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/contactus"/>
+            android:src="@drawable/image2"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/header"/>
+            android:src="@drawable/image3"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image4"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image5"/>
     </ViewFlipper>
     <ScrollView
         android:layout_width="match_parent"

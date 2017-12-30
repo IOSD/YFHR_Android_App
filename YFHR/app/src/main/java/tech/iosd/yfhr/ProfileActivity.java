@@ -116,6 +116,9 @@ public class ProfileActivity extends AppCompatActivity {
 
                             if(req_type.equals("received")){
 
+                                mCurrent_state = "req_received";
+                                mProfileSendReqBtn.setText("Accept Friend Request");
+
                                 mDeclineBtn.setVisibility(View.VISIBLE);
                                 mDeclineBtn.setEnabled(true);
 
@@ -286,6 +289,8 @@ public class ProfileActivity extends AppCompatActivity {
                                 mProfileSendReqBtn.setEnabled(true);
                                 mCurrent_state = "friends";
                                 mProfileSendReqBtn.setText("Unfriend this Person");
+
+
 
                                 mDeclineBtn.setVisibility(View.INVISIBLE);
                                 mDeclineBtn.setEnabled(false);
