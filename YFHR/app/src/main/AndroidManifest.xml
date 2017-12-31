@@ -31,7 +31,8 @@
         <activity
             android:name=".ChatActivity"/>
         <activity
-            android:name=".StartActivity"/>
+            android:name=".StartActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".SettingsActivity"/>
         <activity
